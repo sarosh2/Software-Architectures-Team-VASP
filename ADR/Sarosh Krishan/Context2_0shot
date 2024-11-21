@@ -1,0 +1,19 @@
+# ADR:
+The Flood Monitoring and Management System will utilize a combination of a time-series database and a distributed file storage system to effectively handle the storage and management of data from the 150,000 sensors.
+
+## Rationale
+
+1. **Time-Series Database**:
+   - A time-series database (e.g., InfluxDB, TimescaleDB) is optimized for handling high-frequency data ingestion, making it ideal for recording continuous sensor data.
+   - These databases are designed for fast writes and efficient querying of time-based data, which aligns with the need for rapid data ingestion and quick retrieval.
+   - They typically support built-in functionalities for time-series analysis, downsampling, and retention policies that allow for long-term data management without excessive storage costs.
+2. **Distributed File Storage System**:
+   - A distributed file storage system (e.g., Amazon S3, Google Cloud Storage) will be used to store large volumes of historical data or data that does not require immediate access.
+   - This approach provides long-term scalability, allowing the system to grow as more sensors are added or as data retention needs increase.
+   - The distributed nature of these systems also ensures high availability and redundancy, which are critical for a monitoring system that must operate continuously.
+3. **Performance Under Peak Loads**:
+   - The combination allows each system to handle its strengths — the time-series database for high-speed transactions and rapid queries, and distributed storage for archiving vast amounts of data efficiently.
+   - Load balancing and sharding mechanisms can be implemented across the databases to ensure optimal performance during peak data influx.
+
+## Conclusion
+By employing a hybrid architecture of a time-series database for immediate sensor data management and a distributed file storage system for long-term data retention, the Flood Monitoring and Management System will effectively meet the requirements for rapid data ingestion, quick retrieval, and scalability, ensuring efficient performance even as the number of sensors continues to grow.

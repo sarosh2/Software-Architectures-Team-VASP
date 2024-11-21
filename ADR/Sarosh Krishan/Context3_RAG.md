@@ -1,0 +1,4 @@
+# ADR: Microservices Architecture for FMMS
+
+## Decision
+We will adopt a Microservices architecture style for the Flood Monitoring and Management System (FMMS). This approach allows each component—data ingestion, processing, alerting, and user management—to be developed, deployed, and maintained independently. The use of Microservices will facilitate isolated updates and scalability, enabling the system to evolve as requirements change without affecting the entire application. This architecture aligns with the need for flexibility and modularity, ensuring that future updates and troubleshooting can be managed efficiently.

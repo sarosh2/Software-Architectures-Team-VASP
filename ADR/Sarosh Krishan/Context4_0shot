@@ -1,0 +1,15 @@
+# ADR: High Availability and Fault Tolerance Tactics
+
+## Decision
+To ensure high availability and fault tolerance in the Flood Monitoring and Management System, the following tactics will be implemented:
+
+1. **Redundancy**: o	Deploy multiple instances of sensors in flood-prone areas to ensure that if one sensor fails, others can continue to collect data. This can include geographical redundancy (placing sensors in multiple locations) and operational redundancy (using different types of sensors to capture the same data).
+2. **Failover Handling**: o	Implement an automatic failover mechanism that detects failures in real-time and seamlessly switches to backup systems or sensors without human intervention. This will optimize uptime and maintain monitoring capabilities during hardware failures.
+3. **Data Replication**: o	Utilize a distributed data storage strategy where data from sensors is replicated across multiple nodes. This ensures that even if one node becomes unavailable, the data is still accessible from other nodes, minimizing the risk of data loss.
+4. **Edge Computing**: o	Introduce edge computing capabilities to process data locally at the sensor level to alleviate communication load and reduce the impact of network failures. This allows immediate analysis and response to local conditions while ensuring that crucial data is still sent to centralized systems when connectivity allows.
+5. **Heartbeat Monitoring**: Do	Deploy a heartbeat system that consistently checks the health of sensors and subsystems, allowing for quick identification of failures and enabling prompt action to restore operations.
+6. **Graceful Degradation**: o	Implement a strategy where, in the case of partial system failure, the system continues to operate at a reduced level of functionality instead of failing completely. For instance, if certain data points cannot be collected, the system should still function using the available data from other sensors.
+
+## Outcome
+By combining these techniques, the Flood Monitoring and Management System will achieve a robust architecture capable of enduring faults, maximizing uptime, and providing reliable monitoring in adverse conditions.
+

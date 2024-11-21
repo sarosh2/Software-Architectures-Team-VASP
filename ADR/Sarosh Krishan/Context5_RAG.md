@@ -1,0 +1,4 @@
+# ADR: Publish/Subscribe Communication Pattern
+
+## Decision
+Implement a Publish/Subscribe (Pub/Sub) communication pattern for the Flood Monitoring and Management System. This approach allows sensors to publish only critical updates to a broker, which can then distribute these updates to interested listeners without requiring constant active communication from the sensors. Non-critical data transmissions will be batched and sent at predefined intervals or only during specific conditions (e.g., significant changes in sensor readings). Additionally, adaptive transmission techniques will be used to dynamically adjust the frequency of updates based on power reserves and the urgency of information. This combination will balance the need for timely critical updates while conserving energy and extending battery life.
