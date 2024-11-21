@@ -3,7 +3,7 @@ Flood Monitoring and Management System must process large volumes of real-time d
 
 ## Status
 proposed
-##Decision
+## Decision
  Utilize a Microservices Architecture with Stream Processing and Event-Driven Design
 Rationale:
 1.    Microservices Architecture: By decomposing the system into smaller, independent services, we can achieve better scalability and resilience. Each microservice can handle specific tasks, such as data ingestion, processing, storage, and alerting. This separation allows for independent deployment and scaling based on demand.
@@ -17,7 +17,7 @@ Benefits:
 •    Flexibility: New sensors or data sources can be added without significant changes to the core architecture.
 •    Real-time Processing: Enables immediate response to environmental changes or alerts based on predefined thresholds.
 
-##Considerations
+## Considerations
  •    Ensure robust monitoring and alerting mechanisms are in place to detect failures or bottlenecks in the system.
 •    Implement data validation and filtering to handle anomalies and ensure only relevant data is processed.
 •    Plan for disaster recovery and data retention policies for historical data analysis and compliance purposes.
