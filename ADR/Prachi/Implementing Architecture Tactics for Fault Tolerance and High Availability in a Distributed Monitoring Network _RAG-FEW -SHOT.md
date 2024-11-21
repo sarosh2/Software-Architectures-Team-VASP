@@ -14,7 +14,7 @@ To achieve fault tolerance and reliable monitoring during high-stress events for
 7.    Geographical Distribution of Data Centers: If feasible, employ a geographically distributed architecture for data storage and processing, reducing the risk of a single point of failure due to natural disasters or network outages.
 
 
-##Consideration
+## Consideration
  1.    These architectural tactics collectively enhance the resilience of the Flood Monitoring and Management System, allowing it to maintain operational integrity during adverse conditions and high data loads. 
 2.The increased complexity of the system may require additional development and maintenance resources.
 3.    While redundancy and replication increase costs, they are essential for ensuring reliable data collection in mission-critical applications like flood monitoring.
