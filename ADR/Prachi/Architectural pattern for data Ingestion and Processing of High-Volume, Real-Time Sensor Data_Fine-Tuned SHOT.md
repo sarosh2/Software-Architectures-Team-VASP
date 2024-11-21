@@ -1,0 +1,7 @@
+# Architectural pattern for data Ingestion and Processing of High-Volume, Real-Time Sensor Data
+
+## rejected
+
+## Flood Monitoring and Management System must process large volumes of real-time data from up to 150,000 sensors deployed across various locations, each sending frequent updates on environmental conditions. There is a need for an architecture pattern that can enable the system to handle continuous data streams efficiently, with minimal latency, even during peak load periods. This decision must consider both normal operating conditions and high-stress events when multiple sensors may transmit critical alerts simultaneously. Give opinion about different SA Styles with reasons that can support this kind of requirement
+
+## We will use Event-Driven Architecture with a Message Queue as its primary communication mechanism. This enables the system to handle the high-volume, real-time data streams from the sensors, and ensures that data processing is not blocked by any single component or operating condition. We will also leverage the Event-Driven Architecture to enable advanced features such as Data History, Alerts, and Notifications. The chosen architecture supports horizontal scaling and is resistant to both functional and non-functional requirement attacks. Event-Driven Architecture is Choi's preferred
